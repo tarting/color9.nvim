@@ -79,62 +79,63 @@ local function set_terminal_colors(colors)
     vim.g.terminal_color_15 = colors.fg
 end
 
-groups.setup = function()
+groups.reset = function()
     -- Clear all defaults
-    Comment     = { fg = nil, bg = nil }
-    Constant    = { fg = nil, bg = nil }
-    Special     = { fg = nil, bg = nil }
-    Identifier  = { fg = nil, bg = nil }
-    Statement   = { fg = nil, bg = nil }
-    PreProc     = { fg = nil, bg = nil }
-    Type        = { fg = nil, bg = nil }
-    Underlined  = { fg = nil, bg = nil }
-    Ignore      = { fg = nil, bg = nil }
-    Error       = { fg = nil, bg = nil }
-    Todo        = { fg = nil, bg = nil }
-    NonText     = { fg = nil, bg = nil }
-    Directory   = { fg = nil, bg = nil }
-    ErrorMsg    = { fg = nil, bg = nil }
-    IncSearch   = { fg = nil, bg = nil }
-    Search      = { fg = nil, bg = nil }
-    MoreMsg     = { fg = nil, bg = nil }
-    ModeMsg     = { fg = nil, bg = nil }
-    LineNr      = { fg = nil, bg = nil }
-    CursorLineN = { fg = nil, bg = nil }
-    Question    = { fg = nil, bg = nil }
-    StatusLine  = { fg = nil, bg = nil }
-    StatusLineN = { fg = nil, bg = nil }
-    VertSplit   = { fg = nil, bg = nil }
-    Title       = { fg = nil, bg = nil }
-    Visual      = { fg = nil, bg = nil }
-    VisualNOS   = { fg = nil, bg = nil }
-    WarningMsg  = { fg = nil, bg = nil }
-    WildMenu    = { fg = nil, bg = nil }
-    Folded      = { fg = nil, bg = nil }
-    FoldColumn  = { fg = nil, bg = nil }
-    DiffAdd     = { fg = nil, bg = nil }
-    DiffChange  = { fg = nil, bg = nil }
-    DiffDelete  = { fg = nil, bg = nil }
-    DiffText    = { fg = nil, bg = nil }
-    SignColumn  = { fg = nil, bg = nil }
-    Conceal     = { fg = nil, bg = nil }
-    SpellBad    = { fg = nil, bg = nil }
-    SpellCap    = { fg = nil, bg = nil }
-    SpellRare   = { fg = nil, bg = nil }
-    SpellLocal  = { fg = nil, bg = nil }
-    Pmenu       = { fg = nil, bg = nil }
-    PmenuSel    = { fg = nil, bg = nil }
-    PmenuSbar   = { fg = nil, bg = nil }
-    PmenuThumb  = { fg = nil, bg = nil }
-    TabLine     = { fg = nil, bg = nil }
-    TabLineSel  = { fg = nil, bg = nil }
-    TabLineFill = { fg = nil, bg = nil }
-    CursorColum = { fg = nil, bg = nil }
-    CursorLine  = { fg = nil, bg = nil }
-    ColorColumn = { fg = nil, bg = nil }
-    MatchParen  = { fg = nil, bg = nil }
-    -- Base groups
-
+    local reset_groups = {
+        Comment     = { fg = nil, bg = nil },
+        Constant    = { fg = nil, bg = nil },
+        Special     = { fg = nil, bg = nil },
+        Identifier  = { fg = nil, bg = nil },
+        Statement   = { fg = nil, bg = nil },
+        PreProc     = { fg = nil, bg = nil },
+        Type        = { fg = nil, bg = nil },
+        Underlined  = { fg = nil, bg = nil },
+        Ignore      = { fg = nil, bg = nil },
+        Error       = { fg = nil, bg = nil },
+        Todo        = { fg = nil, bg = nil },
+        NonText     = { fg = nil, bg = nil },
+        Directory   = { fg = nil, bg = nil },
+        ErrorMsg    = { fg = nil, bg = nil },
+        IncSearch   = { fg = nil, bg = nil },
+        Search      = { fg = nil, bg = nil },
+        MoreMsg     = { fg = nil, bg = nil },
+        ModeMsg     = { fg = nil, bg = nil },
+        LineNr      = { fg = nil, bg = nil },
+        CursorLineN = { fg = nil, bg = nil },
+        Question    = { fg = nil, bg = nil },
+        StatusLine  = { fg = nil, bg = nil },
+        StatusLineN = { fg = nil, bg = nil },
+        VertSplit   = { fg = nil, bg = nil },
+        Title       = { fg = nil, bg = nil },
+        Visual      = { fg = nil, bg = nil },
+        VisualNOS   = { fg = nil, bg = nil },
+        WarningMsg  = { fg = nil, bg = nil },
+        WildMenu    = { fg = nil, bg = nil },
+        Folded      = { fg = nil, bg = nil },
+        FoldColumn  = { fg = nil, bg = nil },
+        DiffAdd     = { fg = nil, bg = nil },
+        DiffChange  = { fg = nil, bg = nil },
+        DiffDelete  = { fg = nil, bg = nil },
+        DiffText    = { fg = nil, bg = nil },
+        SignColumn  = { fg = nil, bg = nil },
+        Conceal     = { fg = nil, bg = nil },
+        SpellBad    = { fg = nil, bg = nil },
+        SpellCap    = { fg = nil, bg = nil },
+        SpellRare   = { fg = nil, bg = nil },
+        SpellLocal  = { fg = nil, bg = nil },
+        Pmenu       = { fg = nil, bg = nil },
+        PmenuSel    = { fg = nil, bg = nil },
+        PmenuSbar   = { fg = nil, bg = nil },
+        PmenuThumb  = { fg = nil, bg = nil },
+        TabLine     = { fg = nil, bg = nil },
+        TabLineSel  = { fg = nil, bg = nil },
+        TabLineFill = { fg = nil, bg = nil },
+        CursorColum = { fg = nil, bg = nil },
+        CursorLine  = { fg = nil, bg = nil },
+        ColorColumn = { fg = nil, bg = nil },
+        MatchParen  = { fg = nil, bg = nil },
+    }
+    return reset_groups
 end
 
 
