@@ -1,14 +1,7 @@
 local M = {}
 
 -- default configuration 
-M.config = {
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = true,
-  strikethrough = true,
-  palette_overrides = {},
-}
+M.config = {}
 
 function M.setup(config)
     M.config = vim.tbl_extend("force", M.config, config or {})
@@ -35,4 +28,4 @@ M.load = function ()
         vim.api.nvim_set_hl(0, group, settings)
     end
 end
-return n
+return M
