@@ -1,6 +1,5 @@
 local M = {}
 
--- default configuration 
 M.config = {}
 
 function M.setup(config)
