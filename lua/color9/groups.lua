@@ -3,57 +3,38 @@ local groups = {}
 local function get_base_colors(colors)
     -- default to light theme
     local base_colors = {
-        bg1 = colors.light1,
-        bg2 = colors.light2,
-        bg3 = colors.light3,
-        bg4 = colors.light4,
+        bg1 = colors.w1,
+        bg2 = colors.w2,
+        bg3 = colors.w3,
+        bg4 = colors.w4,
         bg_term = colors.white,
-        gray = colors.dark3,
+        gray = colors.bk3,
         fg1 = colors.black,
-        fg2 = colors.dark1,
-        light_dark = colors.light1,
-        red = colors.red2,
-        green = colors.green2,
-        blue = colors.blue2,
-        magenta = colors.magenta2,
-        cyan = colors.cyan2,
-        alt_red = colors.red1,
-        alt_green = colors.green1,
-        alt_blue = colors.blue1,
-        alt_magenta = colors.magenta1,
-        alt_cyan = colors.cyan1,
-        gold = colors.gold,
-        beige = colors.beige,
+        fg2 = colors.bk1,
+        red = colors.r2,
+        green = colors.g2,
+        yellow = colors.y2,
+        blue = colors.b2,
+        magenta = colors.m2,
+        cyan = colors.c2,
+        light_red = colors.r1,
+        light_green = colors.g1,
+        light_yellow = colors.y1,
+        light_blue = colors.b1,
+        light_magenta = colors.m1,
+        light_cyan = colors.c1,
+        dark_red = colors.r3,
+        dark_green = colors.g3,
+        dark_yellow = colors.y3,
+        dark_blue = colors.b3,
+        dark_magenta = colors.m3,
+        dark_cyan = colors.c3,
     }
 
-    local dark_colors = {
-        bg1 = colors.black,
-        bg2 = colors.dark1,
-        bg3 = colors.dark2,
-        bg4 = colors.dark3,
-        bg_term = colors.dark1,
-        gray = colors.dark3,
-        fg1 = colors.white,
-        fg2 = colors.light1,
-        light_dark = colors.light1,
-        red = colors.red2,
-        green = colors.green2,
-        blue = colors.blue2,
-        magenta = colors.magenta2,
-        cyan = colors.cyan2,
-        alt_red = colors.red3,
-        alt_green = colors.green3,
-        alt_blue = colors.blue3,
-        alt_magenta = colors.magenta3,
-        alt_cyan = colors.cyan3,
-        gold = colors.gold,
-        beige = colors.beige,
-    }
-
-    local bg = vim.o.background
-    if bg == "dark" then
-        base_colors = dark_colors
-    end
+    -- local bg = vim.o.background
+    -- if bg == "dark" then
+    --     base_colors = dark_colors
+    -- end
 
     return base_colors
 end
@@ -62,24 +43,115 @@ end
 -- Set neovim terminal colors
 local function set_terminal_colors(colors)
     vim.g.terminal_color_0 = colors.bg_term
+    vim.g.terminal_color_0 = colors.dark_magenta
     vim.g.terminal_color_8 = colors.gray
-    vim.g.terminal_color_1 = colors.alt_red
+    vim.g.terminal_color_1 = colors.dark_red
     vim.g.terminal_color_9 = colors.red
-    vim.g.terminal_color_2 = colors.alt_green
+    vim.g.terminal_color_2 = colors.dark_green
     vim.g.terminal_color_10 = colors.green
-    vim.g.terminal_color_3 = colors.beige
-    vim.g.terminal_color_11 = colors.gold
-    vim.g.terminal_color_4 = colors.alt_blue
+    vim.g.terminal_color_3 = colors.yellow
+    vim.g.terminal_color_11 = colors.dark_yellow
+    vim.g.terminal_color_4 = colors.dark_blue
     vim.g.terminal_color_12 = colors.blue
-    vim.g.terminal_color_5 = colors.alt_magenta
+    vim.g.terminal_color_5 = colors.dark_magenta
     vim.g.terminal_color_13 = colors.magenta
-    vim.g.terminal_color_6 = colors.alt_cyan
+    vim.g.terminal_color_6 = colors.dark_cyan
     vim.g.terminal_color_14 = colors.cyan
     vim.g.terminal_color_7 = colors.light_dark
     vim.g.terminal_color_15 = colors.fg
 end
 
-groups.reset = function()
+
+groups.get_hi_groups = function()
+    local palette = require("color9.palette")
+    local c = get_base_colors(palette)
+    set_terminal_colors(c)
+
+    local hi_groups = {
+        Normal          = { fg = c.fg1, bg = c.bg1 },
+        Visual          = { fg = c.fg1, bg = c.bg2 },
+        NonText         = { fg = c.w3, bg = c.w3 },
+        StatusLine      = { fg = c.fg1, bg = c.light_cyan, bold = true, underline = true},
+        StatusLineNC    = { fg = c.fg1, bg = c.light_cyan, bold = false, underline = false},
+        VertSplit       = { fg = c.fg1, bg = c.light_cyan },
+        LineNr          = { fg = c.bg4, bg = c.light_yellow, bold = false },
+        CursorLineNr    = { fg = c.bg4, bg = c.light_yellow, bold = true},
+        SignColumn      = { link = "LineNr" },
+        Folded          = { fg = c.dark_yellow },
+        FoldColumn      = { fg = c.dark_yellow, bold = true },
+        TabLine         = { link = "StatusLineNC" },
+        TabLineFill     = { link = "StatusLineNC" },
+        TabLineSel      = { fg = c.bg1, bg = c.dark_magenta },
+
+        Search          = { link = "Visual" },
+        IncSearch       = { fg = c.fg1, bg = c.bg2, bold = true },
+
+        WildMenu        = { fg = c.bg1, bg = c.dark_magenta },
+        Pmenu           = { fg = c.dark_green, bg = c.light_green },
+        PmenuSel        = { fg = c.fg4, bg = c.green },
+        PmenuSbar       = { fg = c.light_green, bg = c.dark_green },
+        PmenuThum       = { fg = c.light_green, bg = c.fg4 },
+
+        CursorColum     = { bg = c.light_yellow },
+        CursorLine      = { link = "CursorColum" },
+
+        ErrorMsg       = { bold = true },
+        ModeMsg        = { bold = true },
+        MoreMsg        = { bold = true },
+        WarningMsg     = { bold = true },
+        Directory      = { bold = true },
+
+
+        -- Minimal syntax highlighting
+        Comment        = { bold = true },
+        Underlined     = { underline = true },
+        Title          = { bold = true },
+
+        SpellBad       = { fg = c.dark_red, undercurl = true },
+        SpellCap       = { undercurl = true },
+        SpellLocal     = { undercurl = true },
+        SpellRare      = { undercurl = true },
+
+        htmlBold       = { bold = true },
+        htmlItalic     = { italic = true },
+
+        Error          = { fg = c.bg1, bg = c.dark_red },
+        Todo           = { fg = c.dark_magenta },
+        todo           = { fg = c.dark_magenta },
+
+        Special        = { italic = true },
+        MatchParen     = { bold = true },
+        SpecialKey     = { bold = true },
+        Ignore         = { bold = true },
+        String         = { fg = c.fg2, italic = true },
+
+        helpHyperTextJump = { bold = true },
+        helpHyperTextEntry = { bold = true },
+
+        -- ColorColumn
+        -- Cursor
+        -- CursorIM
+
+        -- VisualNOS
+        -- Conceal
+        -- EndOfBuffer
+
+        DiffAdd        = { fg = c.dark_green },
+        DiffChange     = { fg = c.dark_yellow },
+        DiffDelete     = { fg = c.dark_red },
+        DiffText       = { fg = c.gray },
+
+    }
+    return hi_groups
+end
+
+
+
+groups.get_clear_groups = function()
+    local palette = require("color9.palette")
+    local colors = get_base_colors(palette)
+    set_terminal_colors(colors)
+
     -- Clear all defaults
     local reset_groups = {
         Comment     = { fg = nil, bg = nil },
@@ -139,4 +211,4 @@ groups.reset = function()
 end
 
 
-
+return groups

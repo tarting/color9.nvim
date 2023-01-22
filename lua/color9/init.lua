@@ -20,10 +20,17 @@ M.load = function ()
     vim.g.colors_name = "color9"
     vim.o.termguicolors = true
 
-    local reset_groups = require("color9.groups").reset()
+    local groups = require("color9.groups")
 
-    -- add highlights
-    for group, settings in pairs(reset_groups) do
+    -- Clear all default highlights
+    local clear_groups = groups.get_clear_groups()
+    for group, settings in pairs(clear_groups) do
+        vim.api.nvim_set_hl(0, group, settings)
+    end
+
+    -- Add highlights
+    local hi_groups = groups.get_hi_groups()
+    for group, settings in pairs(hi_groups) do
         vim.api.nvim_set_hl(0, group, settings)
     end
 end
