@@ -1,1 +1,1 @@
-require("color9").load()
+require("color9.nvim").load()

@@ -2,6 +2,7 @@ local groups = {}
 
 local function get_base_colors(colors)
     -- default to light theme
+layout:mount()
     local base_colors = {
         bg1 = colors.w1,
         bg2 = colors.w2,
@@ -119,7 +120,7 @@ groups.get_hi_groups = function()
         Todo           = { fg = c.dark_magenta },
         todo           = { fg = c.dark_magenta },
 
-        Special        = { italic = true },
+        -- Special        = { italic = true },
         MatchParen     = { bold = true },
         SpecialKey     = { bold = true },
         Ignore         = { bold = true },
