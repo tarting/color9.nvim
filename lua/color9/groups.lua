@@ -2,7 +2,6 @@ local groups = {}
 
 local function get_base_colors(colors)
     -- default to light theme
-layout:mount()
     local base_colors = {
         bg1 = colors.w1,
         bg2 = colors.w2,
