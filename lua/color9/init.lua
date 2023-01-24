@@ -8,7 +8,7 @@ end
 
 M.load = function ()
     if vim.version().minor < 7 then
-        vim.notify_once("color9.vim: You must use Neovim version 7.0 or higher")
+        vim.notify_once("color9.nvim: You must use Neovim version 7.0 or higher")
         return
     end
 
