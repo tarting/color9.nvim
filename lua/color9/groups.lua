@@ -64,7 +64,7 @@ end
 
 
 groups.get_hi_groups = function()
-    local palette = require("color9.nvim.palette")
+    local palette = require("color9.palette")
     local c = get_base_colors(palette)
     set_terminal_colors(c)
 
@@ -149,7 +149,7 @@ end
 
 
 groups.get_clear_groups = function()
-    local palette = require("color9.nvim.palette")
+    local palette = require("color9.palette")
     local colors = get_base_colors(palette)
     set_terminal_colors(colors)
 
