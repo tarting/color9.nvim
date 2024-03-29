@@ -31,6 +31,12 @@ return {
 	c1 = "#EEFEFF",
 	c2 = "#B0ECED",
 	c3 = "#6AA7A8",
+	-- orange
+	o1 = "#FFE1BE",
+	o2 = "#FCCC95",
+	o3 = "#F2AE52",
+	o4 = "#DD8D30",
+	o5 = "#B7680D",
 	-- white
 	white = "#FFFFFF",
 	w1 = "#FFFFEC",
