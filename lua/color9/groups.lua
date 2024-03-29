@@ -23,6 +23,9 @@ local function get_base_colors(colors)
 		light_blue = colors.b1,
 		light_magenta = colors.m1,
 		light_cyan = colors.c1,
+		light_orange = colors.o1,
+		orange = colors.o3,
+		dark_orange = colors.o5,
 		dark_red = colors.r3,
 		dark_green = colors.g3,
 		dark_yellow = colors.y3,
@@ -166,6 +169,35 @@ groups.get_hi_groups = function()
 		DiffChange = { fg = c.dark_yellow },
 		DiffDelete = { fg = c.dark_red },
 		DiffText = { fg = c.gray },
+
+		-- FIX: test
+		TodoBgFIX = { fg = c.fg1, bg = c.dark_red, bold = true },
+		TodoFgFIX = { fg = c.dark_red },
+		TodoSignFIX = { fg = c.dark_red, bg = c.light_yellow },
+		-- PERF: test
+		TodoBgPERF = { fg = c.fg1, bg = c.dark_magenta, bold = true },
+		TodoFgPERF = { fg = c.dark_magenta },
+		TodoSignPERF = { fg = c.dark_magenta, bg = c.light_yellow },
+		-- NOTE: test
+		TodoBgNOTE = { fg = c.fg1, bg = c.fg2, bold = true },
+		TodoFgNOTE = { fg = c.fg2 },
+		TodoSignNOTE = { fg = c.fg2, bg = c.light_yellow },
+		-- TEST: test
+		TodoBgTEST = { fg = c.fg1, bg = c.dark_green, bold = true },
+		TodoFgTEST = { fg = c.dark_green },
+		TodoSignTEST = { fg = c.dark_green, bg = c.light_yellow },
+		-- HACK: test
+		TodoBgHACK = { bg = c.orange, fg = c.fg1, bold = true },
+		TodoFgHACK = { fg = c.dark_orange },
+		TodoSignHACK = { fg = c.dark_orange, bg = c.light_yellow },
+		-- WARN: test
+		TodoBgWARN = { bg = c.dark_orange, fg = c.bg1, bold = true },
+		TodoFgWARN = { fg = c.dark_orange },
+		TodoSignWARN = { fg = c.dark_orange, bg = c.light_yellow },
+		-- TODO: test
+		TodoBgTODO = { bg = c.blue, fg = c.bg1, bold = true },
+		TodoFgTODO = { fg = c.dark_blue },
+		TodoSignTODO = { fg = c.blue, bg = c.light_yellow },
 
 		-- Orgmode
 		OrgHeadlineLevel1 = { bold = true },
