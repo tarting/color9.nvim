@@ -135,7 +135,7 @@ groups.get_hi_groups = function()
 		Directory = { bold = true },
 
 		-- Minimal syntax highlighting
-		Comment = { fg = c.y3, bold = true },
+		Comment = { fg = c.dark_yellow, bold = true },
 		Underlined = { underline = true },
 		Title = { bold = true },
 
@@ -172,41 +172,6 @@ groups.get_hi_groups = function()
 		DiffChange = { fg = c.dark_yellow },
 		DiffDelete = { fg = c.dark_red },
 		DiffText = { fg = c.gray },
-
-		DiagnosticError = { fg = c.dark_red, bold = true },
-		DiagnosticWarn = { fg = c.dark_orange, bold = true },
-		DiagnosticInfo = { fg = c.dark_blue, bold = true },
-		DiagnosticHint = { fg = c.dark_cyan, bold = true },
-		DiagnosticOk = { fg = c.dark_green, bold = true },
-
-		-- FIX: test
-		ThemeTodoBgFIX = { fg = c.fg1, bg = c.dark_red, bold = true },
-		ThemeTodoFgFIX = { fg = c.dark_red },
-		ThemeTodoSignFIX = { fg = c.dark_red, bg = c.light_yellow },
-		-- PERF: test
-		ThemeTodoBgPERF = { fg = c.fg1, bg = c.dark_magenta, bold = true },
-		ThemeTodoFgPERF = { fg = c.dark_magenta },
-		ThemeTodoSignPERF = { fg = c.dark_magenta, bg = c.light_yellow },
-		-- NOTE: test
-		ThemeTodoBgNOTE = { fg = c.fg1, bg = c.fg2, bold = true },
-		ThemeTodoFgNOTE = { fg = c.fg2 },
-		ThemeTodoSignNOTE = { fg = c.fg2, bg = c.light_yellow },
-		-- TEST: test
-		ThemeTodoBgTEST = { fg = c.fg1, bg = c.dark_green, bold = true },
-		ThemeTodoFgTEST = { fg = c.dark_green },
-		ThemeTodoSignTEST = { fg = c.dark_green, bg = c.light_yellow },
-		-- HACK: test
-		ThemeTodoBgHACK = { bg = c.orange, fg = c.fg1, bold = true },
-		ThemeTodoFgHACK = { fg = c.dark_orange },
-		ThemeTodoSignHACK = { fg = c.dark_orange, bg = c.light_yellow },
-		-- WARN: test
-		ThemeTodoBgWARN = { bg = c.dark_orange, fg = c.bg1, bold = true },
-		ThemeTodoFgWARN = { fg = c.dark_orange },
-		ThemeTodoSignWARN = { fg = c.dark_orange, bg = c.light_yellow },
-		-- TODO: test
-		ThemeTodoBgTODO = { bg = c.blue, fg = c.bg1, bold = true },
-		ThemeTodoFgTODO = { fg = c.dark_blue },
-		ThemeTodoSignTODO = { fg = c.blue, bg = c.light_yellow },
 
 		-- Orgmode
 		OrgHeadlineLevel1 = { bold = true },
@@ -336,11 +301,6 @@ groups.get_clear_groups = function()
 		CursorLine = { fg = nil, bg = nil },
 		ColorColumn = { fg = nil, bg = nil },
 		MatchParen = { fg = nil, bg = nil },
-		DiagnosticError = { fg = nil, bg = nil },
-		DiagnosticWarn = { fg = nil, bg = nil },
-		DiagnosticInfo = { fg = nil, bg = nil },
-		DiagnosticHint = { fg = nil, bg = nil },
-		DiagnosticOk = { fg = nil, bg = nil },
 	}
 	return reset_groups
 end
