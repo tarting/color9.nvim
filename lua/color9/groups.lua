@@ -59,6 +59,7 @@ local function get_base_colors(colors)
 		dark_magenta = colors.m3,
 		dark_cyan = colors.c3,
 	}
+
 	local bg = vim.o.background
 	if bg == "dark" then
 		base_colors = dark_colors
@@ -128,7 +129,7 @@ groups.get_hi_groups = function()
 		Directory = { bold = true },
 
 		-- Minimal syntax highlighting
-		Comment = { bold = true },
+		Comment = { fg = c.y3, bold = true },
 		Underlined = { underline = true },
 		Title = { bold = true },
 
@@ -145,7 +146,7 @@ groups.get_hi_groups = function()
 		todo = { fg = c.dark_magenta },
 
 		-- Special        = { italic = true },
-		MatchParen = { bold = true },
+		MatchParen = { bg = c.bg3, bold = true },
 		SpecialKey = { bold = true },
 		Ignore = { bold = true },
 		String = { fg = c.fg2, italic = true },
@@ -178,7 +179,6 @@ groups.get_hi_groups = function()
 		OrgHeadlineLevel9 = { link = "OrgHeadlineLevel8" },
 		OrgHeadlineLevel10 = { link = "OrgHeadlineLevel9" },
 		OrgHeadlineLevel11 = { link = "OrgHeadlineLevel10" },
-		OrgHeadlineLevel11 = { link = "OrgHeadlineLevel11" },
 		OrgHeadlineLevel12 = { link = "OrgHeadlineLevel11" },
 		OrgHeadlineLevel13 = { link = "OrgHeadlineLevel12" },
 		OrgHeadlineLevel14 = { link = "OrgHeadlineLevel13" },
