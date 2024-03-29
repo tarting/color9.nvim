@@ -5,6 +5,7 @@ return {
 	bk1 = "#424242",
 	bk2 = "#777777",
 	bk3 = "#ABABAB",
+	bk4 = "#E0E0E0",
 	-- red
 	r1 = "#F8E7E7",
 	r2 = "#F2ACAA",
