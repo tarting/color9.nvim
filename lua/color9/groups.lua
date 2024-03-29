@@ -17,6 +17,7 @@ local function get_base_colors(colors)
 		blue = colors.b2,
 		magenta = colors.m2,
 		cyan = colors.c2,
+		orange = colors.o3,
 		light_red = colors.r1,
 		light_green = colors.g1,
 		light_yellow = colors.y1,
@@ -24,14 +25,13 @@ local function get_base_colors(colors)
 		light_magenta = colors.m1,
 		light_cyan = colors.c1,
 		light_orange = colors.o1,
-		orange = colors.o3,
-		dark_orange = colors.o5,
 		dark_red = colors.r3,
 		dark_green = colors.g3,
 		dark_yellow = colors.y3,
 		dark_blue = colors.b3,
 		dark_magenta = colors.m3,
 		dark_cyan = colors.c3,
+		dark_orange = colors.o5,
 	}
 
 	local dark_colors = {
@@ -49,18 +49,21 @@ local function get_base_colors(colors)
 		blue = colors.b2,
 		magenta = colors.m2,
 		cyan = colors.c2,
+		orange = colors.o3,
 		light_red = colors.r1,
 		light_green = colors.g1,
 		light_yellow = colors.y1,
 		light_blue = colors.b1,
 		light_magenta = colors.m1,
 		light_cyan = colors.c1,
+		light_orange = colors.o1,
 		dark_red = colors.r3,
 		dark_green = colors.g3,
 		dark_yellow = colors.y3,
 		dark_blue = colors.b3,
 		dark_magenta = colors.m3,
 		dark_cyan = colors.c3,
+		dark_orange = colors.o5,
 	}
 
 	local bg = vim.o.background
