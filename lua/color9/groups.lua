@@ -174,33 +174,33 @@ groups.get_hi_groups = function()
 		DiffText = { fg = c.gray },
 
 		-- FIX: test
-		TodoBgFIX = { fg = c.fg1, bg = c.dark_red, bold = true },
-		TodoFgFIX = { fg = c.dark_red },
-		TodoSignFIX = { fg = c.dark_red, bg = c.light_yellow },
+		ThemeTodoBgFIX = { fg = c.fg1, bg = c.dark_red, bold = true },
+		ThemeTodoFgFIX = { fg = c.dark_red },
+		ThemeTodoSignFIX = { fg = c.dark_red, bg = c.light_yellow },
 		-- PERF: test
-		TodoBgPERF = { fg = c.fg1, bg = c.dark_magenta, bold = true },
-		TodoFgPERF = { fg = c.dark_magenta },
-		TodoSignPERF = { fg = c.dark_magenta, bg = c.light_yellow },
+		ThemeTodoBgPERF = { fg = c.fg1, bg = c.dark_magenta, bold = true },
+		ThemeTodoFgPERF = { fg = c.dark_magenta },
+		ThemeTodoSignPERF = { fg = c.dark_magenta, bg = c.light_yellow },
 		-- NOTE: test
-		TodoBgNOTE = { fg = c.fg1, bg = c.fg2, bold = true },
-		TodoFgNOTE = { fg = c.fg2 },
-		TodoSignNOTE = { fg = c.fg2, bg = c.light_yellow },
+		ThemeTodoBgNOTE = { fg = c.fg1, bg = c.fg2, bold = true },
+		ThemeTodoFgNOTE = { fg = c.fg2 },
+		ThemeTodoSignNOTE = { fg = c.fg2, bg = c.light_yellow },
 		-- TEST: test
-		TodoBgTEST = { fg = c.fg1, bg = c.dark_green, bold = true },
-		TodoFgTEST = { fg = c.dark_green },
-		TodoSignTEST = { fg = c.dark_green, bg = c.light_yellow },
+		ThemeTodoBgTEST = { fg = c.fg1, bg = c.dark_green, bold = true },
+		ThemeTodoFgTEST = { fg = c.dark_green },
+		ThemeTodoSignTEST = { fg = c.dark_green, bg = c.light_yellow },
 		-- HACK: test
-		TodoBgHACK = { bg = c.orange, fg = c.fg1, bold = true },
-		TodoFgHACK = { fg = c.dark_orange },
-		TodoSignHACK = { fg = c.dark_orange, bg = c.light_yellow },
+		ThemeTodoBgHACK = { bg = c.orange, fg = c.fg1, bold = true },
+		ThemeTodoFgHACK = { fg = c.dark_orange },
+		ThemeTodoSignHACK = { fg = c.dark_orange, bg = c.light_yellow },
 		-- WARN: test
-		TodoBgWARN = { bg = c.dark_orange, fg = c.bg1, bold = true },
-		TodoFgWARN = { fg = c.dark_orange },
-		TodoSignWARN = { fg = c.dark_orange, bg = c.light_yellow },
+		ThemeTodoBgWARN = { bg = c.dark_orange, fg = c.bg1, bold = true },
+		ThemeTodoFgWARN = { fg = c.dark_orange },
+		ThemeTodoSignWARN = { fg = c.dark_orange, bg = c.light_yellow },
 		-- TODO: test
-		TodoBgTODO = { bg = c.blue, fg = c.bg1, bold = true },
-		TodoFgTODO = { fg = c.dark_blue },
-		TodoSignTODO = { fg = c.blue, bg = c.light_yellow },
+		ThemeTodoBgTODO = { bg = c.blue, fg = c.bg1, bold = true },
+		ThemeTodoFgTODO = { fg = c.dark_blue },
+		ThemeTodoSignTODO = { fg = c.blue, bg = c.light_yellow },
 
 		-- Orgmode
 		OrgHeadlineLevel1 = { bold = true },
