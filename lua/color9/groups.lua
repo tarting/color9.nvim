@@ -103,7 +103,7 @@ groups.get_hi_groups = function()
 	local hi_groups = {
 		Normal = { fg = c.fg1, bg = c.bg1 },
 		Visual = { fg = c.fg1, bg = c.bg2 },
-		NonText = { fg = c.w3, bg = c.w3 },
+		NonText = { fg = c.light_yellow, bg = c.bg1 },
 		StatusLine = { fg = c.fg1, bg = c.light_cyan, bold = true, underline = true },
 		StatusLineNC = { fg = c.fg1, bg = c.light_cyan, bold = false, underline = false },
 		VertSplit = { fg = c.fg1, bg = c.light_cyan },
